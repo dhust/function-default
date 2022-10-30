@@ -1,5 +1,5 @@
 # Directions
-Re-arrange the blocks so that the program asks the user to continuously enter numbers, adds them all up, and then stops asking when the total reaches or exceeds 20.
+Create a function that takes two parameters: a name and a greet. Then print a sentence using both. Call the function twice. The first call should print, "Hello Tom! Nice to see you." The second call should print, "Hi Becca! Nice to see you."
 
 # Code
 <div id="sortableTrash" class="sortable-code"></div> 
@@ -55,13 +55,11 @@ Re-arrange the blocks so that the program asks the user to continuously enter nu
 
 <script type="text/javascript"> 
 (function(){
-  var initial = "total = 0\n" +
-    "while True:\n" +
-    "	number = input(&quot;Enter a number&quot;)\n" +
-    "	number = int(number)\n" +
-    "	total = total + number\n" +
-    "	if number &gt;= 20:\n" +
-    "		break";
+  var initial = "def greeting(name, greet=&quot;Hi&quot;):\n" +
+    "	print(f&quot;{greet} {name}. Nice to see you.&quot;)\n" +
+    "    \n" +
+    "greeting(&quot;Tom&quot;, &quot;Hello&quot;)\n" +
+    "greeting(&quot;Becca&quot;)";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "sortable",
     "max_wrong_lines": 10,
